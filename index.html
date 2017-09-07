@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/reset.css">
+</head>
+
+<body>
+    <div class='wrap' id='app'>
+        <header>
+            <ul>
+                <li></li>
+                <li>购物车</li>
+                <li>编辑</li>
+            </ul>
+        </header>
+        <section>
+            <div class='sec_one'>
+                <span></span><span>一说科技</span>
+            </div>
+            <div class='sec_two'>
+                <small></small>
+                <dl>
+                    <dt><img src="images/img1_03.png" alt=""></dt>
+                    <dd>
+                        <p><span>智能机器不会代替人类，须要人类更好的学习</span><span>√</span></p>
+                        <p><span>856</span><span>x1</span></p>
+                    </dd>
+                </dl>
+            </div>
+            <div class="sec_three">
+                <div class='sec_one'>
+                    <span></span><span>一说科技</span>
+                </div>
+            </div>
+
+            <div class='sec_two' v-for='i in data'>
+                <small></small>
+                <dl>
+                    <dt><img :src="i.img" alt=""></dt>
+                    <dd>
+                        <p><span>{{i.con}}</span><span>√</span></p>
+                        <p><span>{{i.price}}</span><span>{{i.num}}</span></p>
+                    </dd>
+                </dl>
+            </div>
+        </section>
+        <footer>
+            <ul>
+                <li>首页</li>
+                <li>微淘</li>
+                <li>消息</li>
+                <li>购物车</li>
+                <li>我的淘宝</li>
+            </ul>
+        </footer>
+    </div>
+    <script src='vue.min.js'></script>
+    <script src='angular.min.js'></script>
+    <script src='jquery-1.8.3.min.js'></script>
+    <script>
+        var datas = '';
+        var vm = new Vue({
+            el: '#app',
+            data: {
+                data: []
+            },
+            created: function() {
+                var _this = this;
+                console.log(this)
+                $.ajax({
+                    url: 'http://localhost:9990/index',
+                    method: 'GET',
+                    success: function(datas) {
+                        _this.data = datas;
+                        console.log(datas)
+                            // typeof(datas);
+                    }
+                })
+            }
+
+        })
+    </script>
+</body>
+
+</html>
