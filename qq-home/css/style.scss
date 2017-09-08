@@ -1,0 +1,100 @@
+body,
+html {
+    width: 100%;
+    height: 100%;
+}
+
+html {
+    font-size: 100px;
+}
+
+.wrap {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    header {
+        width: 100%;
+        flex-shrink: 0;
+        p {
+            width: 80%;
+            margin-top: .1rem;
+            margin-bottom: .1rem;
+            margin-left: 10%;
+            height: .6rem;
+            background: #f3f3f3;
+            input {
+                width: 100%;
+                height: 100%;
+                background: none;
+                border: none;
+                outline: none;
+            }
+        }
+        h3 {
+            width: 100%;
+            height: .6rem;
+            line-height: .6rem;
+            padding-left: .25rem;
+            box-sizing: border-box;
+        }
+    }
+    section {
+        width: 100%;
+        height: 100%;
+        flex-shrink: 1;
+        flex: 1;
+        overflow-y: auto;
+        .sec_one {
+            width: 100%;
+            border-top: 1px solid #ccc;
+            // border-bottom: 1px solid #ccc;
+            padding: .1rem 0;
+            dl {
+                width: 100%;
+                display: flex;
+                dt {
+                    width: 1rem;
+                    height: 1rem;
+                    margin-left: .2rem;
+                    img {
+                        width: 100%;
+                        height: 100%;
+                    }
+                }
+                dd {
+                    flex: 1;
+                    p {
+                        height: 50%;
+                        &:nth-child(1) {
+                            width: 100%;
+                            display: flex;
+                            justify-content: space-between;
+                            span {
+                                &:nth-child(1) {
+                                    font-size: .3rem;
+                                    color: #000000;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    footer {
+        width: 100%;
+        flex-shrink: 0;
+        ul {
+            width: 100%;
+            display: flex;
+            padding: .1rem 0;
+            li {
+                flex: 1;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+    }
+}
