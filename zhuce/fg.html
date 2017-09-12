@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id='app'></div>
+    <template id='tem'>
+        <div>
+            <transition mode='out-in'>
+            <div v-if='state' key='1'>1111</div>
+            <div v-else key='2'>2222</div>
+            
+        </transition><button @click='fn'>注册</button>
+        </div>
+        
+    </template>
+    <script src='vue.min.js'></script>
+    <script>
+        var vm = new Vue({
+            el: '#app',
+            template: '#tem',
+            data: {
+                state: true
+            },
+            methods: {
+                fn() {
+                    this.state = !this.state;
+                }
+            }
+        })
+    </script>
+</body>
+
+</html>
