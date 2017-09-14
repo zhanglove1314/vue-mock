@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="fonts/iconfont.css">
+</head>
+
+<body>
+    <div class="wrap" id='app'>
+        <header>
+            <ul>
+                <li>
+                    <router-link to='fei'>热门</router-link>
+                </li>
+                <li>
+                    <router-link to='other'>分类</router-link>
+                </li>
+                <li>
+                    <router-link to='jing'>精品</router-link>
+                </li>
+                <li>
+                    <router-link to='zhibo'>直播</router-link>
+                </li>
+                <li>
+                    <router-link to='other'>广播</router-link>
+                </li>
+            </ul>
+        </header>
+        <section>
+            <!-- <ul>
+                <li>
+                    <router-link><i class='iconfont icon-tianmao1'></i><span>音乐</span></router-link>
+                </li>
+                <li>
+                    <router-link><i class='iconfont icon-tianmao1'></i><span>音乐</span></router-link>
+                </li>
+                <li>
+                    <router-link><i class='iconfont icon-tianmao1'></i><span>音乐</span></router-link>
+                </li>
+                <li>
+                    <router-link><i class='iconfont icon-tianmao1'></i><span>音乐</span></router-link>
+                </li>
+                <li>
+                    <router-link><i class='iconfont icon-tianmao1'></i><span>音乐</span></router-link>
+                </li>
+                <li>
+                    <router-link><i class='iconfont icon-tianmao1'></i><span>音乐</span></router-link>
+                </li>
+                <li>
+                    <router-link><i class='iconfont icon-tianmao1'></i><span>音乐</span></router-link>
+                </li>
+                <li>
+                    <router-link><i class='iconfont icon-tianmao1'></i><span>音乐</span></router-link>
+                </li>
+                <li>
+                    <router-link><i class='iconfont icon-tianmao1'></i><span>音乐</span></router-link>
+                </li>
+                <li>
+                    <router-link><i class='iconfont icon-tianmao1'></i><span>音乐</span></router-link>
+                </li>
+                <li>
+                    <router-link><i class='iconfont icon-tianmao1'></i><span>音乐</span></router-link>
+                </li>
+                <li>
+                    <router-link><i class='iconfont icon-tianmao1'></i><span>音乐</span></router-link>
+                </li>
+                <li>
+                    <router-link><i class='iconfont icon-tianmao1'></i><span>音乐</span></router-link>
+                </li>
+                <li>
+                    <router-link><i class='iconfont icon-tianmao1'></i><span>音乐</span></router-link>
+                </li>
+                <li>
+                    <router-link><i class='iconfont icon-tianmao1'></i><span>音乐</span></router-link>
+                </li>
+                <li>
+                    <router-link><i class='iconfont icon-tianmao1'></i><span>音乐</span></router-link>
+                </li>
+            </ul> -->
+            <router-view></router-view>
+        </section>
+        <footer>
+            <ul>
+                <li>
+                    <router-link to='hot'><i class='iconfont icon-tianmao1'></i><span>首页</span></router-link>
+                </li>
+                <li>
+                    <router-link to='zhibo'><i class='iconfont icon-tianmao1'></i><span>我的</span></router-link>
+                </li>
+                <li>
+                    <router-link to='jing'><i class='iconfont icon-tianmao1'></i><span>未发现</span></router-link>
+                </li>
+                <li>
+                    <router-link to='other'><i class='iconfont icon-tianmao1'></i><span>未登录</span></router-link>
+                </li>
+                <li>
+                    <router-link to='hot'><i class='iconfont icon-tianmao1'></i><span>发现</span></router-link>
+                </li>
+            </ul>
+        </footer>
+    </div>
+    <script>
+        document.documentElement.style.fontSize = window.innerWidth / 7.5 + 'px';
+        window.onresize = function() {
+            document.documentElement.style.fontSize = window.innerWidth / 7.5 + 'px';
+        }
+    </script>
+</body>
+
+</html>
