@@ -33,7 +33,13 @@ module.exports = {
     devServer: {
         hot: true,
         port: 9990,
-        host: '127.0.0.1'
+        host: '127.0.0.1',
+        setup(app) {
+            app.get('/fei', function(req, res) {
+                var data = ['历史', '人文', '音乐', '情感', '历史', '人文', '音乐', '情感', '历史', '人文', '音乐', '情感'];
+                res.json(data)
+            })
+        }
     },
     plugins: [
         new webpack.HotModuleReplacementPlugin(),
